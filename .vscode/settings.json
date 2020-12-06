@@ -3,6 +3,11 @@
         "ios": "cpp",
         "iostream": "cpp",
         "array": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "queue": "cpp",
+        "__split_buffer": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "vector": "cpp"
     }
 }
