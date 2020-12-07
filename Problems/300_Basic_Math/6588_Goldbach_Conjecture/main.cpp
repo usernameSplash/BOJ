@@ -25,8 +25,7 @@ void eratosthenes(bool (&sieve)[1000000])
 
 int main()
 {
-    int m, n;
-    cin >> m >> n;
+    cppIOInitialize();
 
     bool sieve[1000000] = {false};
     sieve[0] = true;
@@ -34,11 +33,24 @@ int main()
 
     eratosthenes(sieve);
 
-    for (int i = m; i <= n; i++)
+    while (true)
     {
-        if (!sieve[i])
+        int n;
+        cin >> n;
+
+        if (n == 0)
+            break;
+
+        for (int i = 2; i <= n / 2; i++)
         {
-            cout << i << "\n";
+            if (sieve[i])
+                continue;
+
+            if (!sieve[(n - i)])
+            {
+                cout << n << " = " << i << " + " << n - i << "\n";
+                break;
+            }
         }
     }
 
