@@ -12,3 +12,9 @@
 This repository has the C++ solution-codes of [BOJ(Baekjoon Online Judge)](https://www.acmicpc.net/) problems.
 
 You can look my codes in **Problems** directory.
+
+## Tip!
+
+문제의 고유 번호는 문제의 난이도와 무관합니다.
+
+`boj.kr/(문제번호)`를 입력해서 BOJ의 문제 화면으로 빠르게 이동할 수 있습니다.
