@@ -5,6 +5,8 @@
 
 **Problems** 디렉토리에 각 문제를 테마별로 나누어 저장해두었습니다.
 
+**400(Dynamic Programming Part 1)**부터는 각 문제 별 해설도 추가하고자 합니다.
+
 ---
 
 This repository has the C++ solution-codes of [BOJ(Baekjoon Online Judge)](https://www.acmicpc.net/) problems.
