@@ -1,5 +1,6 @@
 *.out
-main
 **/*.dSYM
-.DS_Store
-*.dYSM/
+*/.DS_Store
+**/*.dYSM/
+**/main
+**/*.out
