@@ -5,7 +5,7 @@
 
 **Problems** 디렉토리에 각 문제를 테마별로 나누어 저장해두었습니다.
 
-**400(Dynamic Programming Part 1)**부터는 각 문제 별 해설도 추가하고자 합니다.
+[**400(Dynamic Programming Part 1)**](https://github.com/usernameSplash/BOJ/tree/main/Problems/400_Dynamic_Programming_Part_1) 부터는 각 문제 별 해설도 추가하고자 합니다.
 
 ---
 
