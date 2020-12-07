@@ -17,4 +17,4 @@ You can look my codes in **Problems** directory.
 
 문제의 고유 번호는 문제의 난이도와 무관합니다.
 
-`boj.kr/(문제번호)`를 입력해서 BOJ의 문제 화면으로 빠르게 이동할 수 있습니다.
+`boj.kr/(문제번호)` URL로 BOJ의 문제 화면으로 빠르게 이동할 수 있습니다.
