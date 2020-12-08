@@ -9,6 +9,7 @@
             "command": "/usr/bin/gcc",
             "args": [
                 "-g",
+                "-std=c++17",
                 "${file}",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}.out"
@@ -27,6 +28,7 @@
             "command": "/usr/bin/g++",
             "args": [
                 "-g",
+                "-std=c++17",
                 "${file}",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}.out"
