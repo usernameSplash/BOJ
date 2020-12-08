@@ -10,8 +10,6 @@ void cppIOInitialize()
     cout.tie(NULL);
 }
 
-long long dp[1000001] = {0};
-
 int RGBStreet(int (*data)[3], int n)
 {
     int dp[1000][3];
