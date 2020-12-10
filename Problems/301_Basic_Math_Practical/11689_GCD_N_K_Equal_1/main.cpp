@@ -1,5 +1,6 @@
 #include <iostream>
-#include <vector>
+#include <map>
+#include <cmath>
 
 using namespace std;
 
@@ -10,43 +11,53 @@ void cppIOInitialize()
     cout.tie(NULL);
 }
 
-vector<int> getPrimeFactors(int n)
+long long EulerPhiFunc(long long n)
 {
-    vector<int> result;
+    double result = n;
 
-    for (int i = 2; i * i <= n; i++)
+    for (long long i = 2; i * i <= n; i++)
     {
-        while (n % i == 0)
+        int exp = 0;
+        if(n % i == 0)
         {
-            result.push_back(i);
-            n /= i;
+            while (n % i == 0)
+            {
+                n /= i;
+            }
+            result *= (1.0 - (1.0 / double(i)));
         }
     }
 
     if (n > 1)
     {
-        result.push_back(n);
+        result *= (1.0 - (1.0 / double(n)));
     }
 
-    return result;
+    return (long long) result;
 }
 
-int EulerPhiFunc(vector<int> v)
-{
-    return 0;
-}
+// int EulerPhiFunc(map<long long, int> m) // 시간 초과가 난다.
+// {
+//     long result = 1;
+//     for(auto factors : m)
+//     {
+//         int base = factors.first;
+//         int exp = factors.second;
+//         result *= (powl(base, exp) - powl(base, exp-1)); // 실수 연산을 하면 오차가 있을 수 있어서 이 공식을 따른다.
+//     }
+
+//     return result;
+// }
 
 int main()
 {
-    int n;
+    long long n;
     cin >> n;
 
-    vector<int> v = getPrimeFactors(n);
+    long long answer = EulerPhiFunc(n);
 
-    for (auto num : v)
-    {
-        cout << num << "\n";
-    }
+    cout << answer;
+    cout << "\n";
 
     return 0;
 }
