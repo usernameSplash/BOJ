@@ -18,6 +18,9 @@
         "unordered_map": "cpp",
         "utility": "cpp",
         "__locale": "cpp",
-        "__string": "cpp"
+        "__string": "cpp",
+        "iosfwd": "cpp",
+        "map": "cpp",
+        "cmath": "cpp"
     }
 }
