@@ -24,6 +24,7 @@ void Permutation(int index, int start, int n, int m)
             cout << a[i] << " ";
         }
         cout << "\n";
+        return;
     }
 
     for (int i = start; i < n; i++)
