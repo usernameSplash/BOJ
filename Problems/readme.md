@@ -8,7 +8,6 @@
     * 301 - Math - Part 1 : Practical
 * 400 - Dynamic Programming - Part 1
     * 401 - Dynamic Programming - Part 1 : Practical
-    * 402 - Dynamic Programming - Part 1 : Challenging
 * 500 - Brute Force
     * 510 - Brute Force - N & M
     * 520 - Brute Force - Permutation
