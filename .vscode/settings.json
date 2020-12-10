@@ -21,6 +21,8 @@
         "__string": "cpp",
         "iosfwd": "cpp",
         "map": "cpp",
-        "cmath": "cpp"
+        "cmath": "cpp",
+        "__bit_reference": "cpp",
+        "__tree": "cpp"
     }
 }
