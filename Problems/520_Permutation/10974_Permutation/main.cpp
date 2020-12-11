@@ -12,9 +12,6 @@ void cppIOInitialize()
     cout.tie(NULL);
 }
 
-int a[10] = {0};      // data
-bool v[10] = {false}; // visited
-
 bool NextPermutation(vector<int> &data)
 {
     int n = data.size();
