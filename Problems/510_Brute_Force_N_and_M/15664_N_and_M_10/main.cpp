@@ -58,7 +58,7 @@ int main()
     int x = temp[0];
     int c = 1;
 
-    for (int i = 1; i <= n; i++)
+    for (int i = 1; i < n; i++)
     {
         if (x == temp[i])
         {
@@ -73,6 +73,10 @@ int main()
             k++;
         }
     }
+
+    data[k] = x;
+    cnt[k] = c;
+    n = k + 1;
 
     Permutation(data, 0, 0, n, m);
 
