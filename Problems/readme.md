@@ -11,6 +11,7 @@
 * 500 - Brute Force
     * 510 - Brute Force - N & M
     * 520 - Brute Force - Permutation
+        * 521 - Brute Force - Permutation : Practical
     * 530 - Brute Force - Recursive Call
     * 540 - Brute Force - BitMask
 * 600 - Graph - Part 1
