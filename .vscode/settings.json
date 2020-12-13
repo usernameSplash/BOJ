@@ -25,6 +25,7 @@
         "__bit_reference": "cpp",
         "__tree": "cpp",
         "__config": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "complex": "cpp"
     }
 }
