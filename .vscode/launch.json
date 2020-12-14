@@ -9,7 +9,9 @@
             "type": "lldb",
             "request": "launch",
             "program": "${fileDirname}/${fileBasenameNoExtension}.out",
-            "args": [],
+            "args": [
+                "-std=c++17"
+            ],
             "preLaunchTask": "C/C++: g++ build active file",
             "stdio": [
                 null,
@@ -23,7 +25,9 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}/${fileBasenameNoExtension}.out",
-            "args": [],
+            "args": [
+                "-std=c++17"
+            ],
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
             "environment": [],

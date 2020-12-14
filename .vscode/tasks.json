@@ -44,6 +44,9 @@
         {
             "label": "exec",
             "type": "shell",
+            "args": [
+                "-std=c++17"
+            ],
             "command": "${fileDirname}/${fileBasenameNoExtension}.out",
             "group": "build"
         }
