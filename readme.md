@@ -1,3 +1,6 @@
+[![Solved.ac
+프로필](http://mazassumnida.wtf/api/v2/generate_badge?boj=leomessi)](https://solved.ac/leomessi)
+
 ## BOJ
 문제해결, C++ 연습, 초심을 찾기 위한 목적으로 개설한 레포지토리입니다.
 
