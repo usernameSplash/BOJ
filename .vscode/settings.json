@@ -27,6 +27,7 @@
         "__config": "cpp",
         "ostream": "cpp",
         "complex": "cpp",
-        "chrono": "cpp"
+        "chrono": "cpp",
+        "ratio": "cpp"
     }
 }
