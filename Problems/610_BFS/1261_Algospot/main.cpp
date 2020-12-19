@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <queue>
 #include <stack>
+#include <deque>
 
 using namespace std;
 
@@ -20,36 +21,36 @@ bool ok(int x, int y, int n, int m)
     return (0 <= x && x < n && 0 <= y && y < m);
 }
 
-void BFS(int n, int m, vector<string> &a, vector<vector<vector<int>>> &d)
+void BFS(int n, int m, vector<string> &a, vector<vector<int>> &d)
 {
-    d[0][0][0] = 0;
-    queue<tuple<int, int, int>> q;
+    d[0][0] = 0;
+    deque<pair<int, int>> q;
 
-    q.push({0, 0, 0});
+    q.push_front({0, 0});
 
     while (!q.empty())
     {
-        int x, y, w;
-        tie(x, y, w) = q.front();
-        q.pop();
+        int x = q.front().first;
+        int y = q.front().second;
+        q.pop_front();
 
         for (int i = 0; i < 4; i++)
         {
             int nx = x + delta[i][0];
             int ny = y + delta[i][1];
 
-            if (ok(nx, ny, n, m))
+            if (ok(nx, ny, n, m) && d[nx][ny] == -1)
             {
-                if (a[nx][ny] == '0' && d[nx][ny][w] == -1)
+                if (a[nx][ny] == '0')
                 {
-                    d[nx][ny][w] = d[x][y][w];
-                    q.push({nx, ny, w});
+                    d[nx][ny] = d[x][y];
+                    q.push_front({nx, ny});
                 }
 
-                if (a[nx][ny] == '1' && d[nx][ny][w + 1] == -1)
+                if (a[nx][ny] == '1')
                 {
-                    d[nx][ny][w + 1] = d[x][y][w] + 1;
-                    q.push({nx, ny, w + 1});
+                    d[nx][ny] = d[x][y] + 1;
+                    q.push_back({nx, ny});
                 }
             }
         }
@@ -63,7 +64,8 @@ int main()
     int n, m;
     cin >> m >> n;
     vector<string> a(100);
-    vector<vector<vector<int>>> d(100, vector<vector<int>>(100, vector<int>(n + m, -1)));
+    // vector<vector<vector<int>>> d(100, vector<vector<int>>(100, vector<int>(n + m, -1)));
+    vector<vector<int>> d(100, vector<int>(100, -1));
 
     for (int i = 0; i < n; i++)
     {
@@ -72,16 +74,7 @@ int main()
 
     BFS(n, m, a, d);
 
-    int ans = 201;
-
-    for (auto c : d[n - 1][m - 1])
-    {
-        if (c == -1)
-            continue;
-        ans = min(ans, c);
-    }
-
-    cout << ans;
+    cout << d[n - 1][m - 1];
     cout << "\n";
 
     return 0;
