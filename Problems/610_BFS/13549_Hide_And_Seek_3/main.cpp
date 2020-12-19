@@ -43,6 +43,7 @@ int BFS(int n, int k, vector<int> &check)
         {
             if (ok(num) && (check[cur] + 1 < check[num]))
             {
+
                 check[num] = check[cur] + 1;
 
                 if (num == k)
@@ -50,16 +51,16 @@ int BFS(int n, int k, vector<int> &check)
                 else
                     q.push(num);
             }
+        }
 
-            if (ok(num * 2) && (check[cur] < check[num * 2]))
-            {
-                check[num * 2] = check[cur] + 1;
+        if (ok(cur * 2) && (check[cur] < check[cur * 2]))
+        {
+            check[cur * 2] = check[cur];
 
-                if (num == k)
-                    found = true;
-                else
-                    q.push(num * 2);
-            }
+            if (cur * 2 == k)
+                found = true;
+            else
+                q.push(cur * 2);
         }
     }
     return check[k];
